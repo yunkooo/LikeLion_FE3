@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        div:nth-child(1) {
+            /* 모두  */
+            border: 10px solid black;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            color: red;
+        }
+
+        div:nth-child(2) {
+            /* 상, 우, 하, 좌 */
+            border: 10px solid black;
+            padding: 10px 20px 10px 20px;
+            width: 100px;
+            height: 100px;
+            color: blue;
+        }
+
+        div:nth-child(3) {
+            /* 상하, 좌우 */
+            border: 10px solid black;
+            padding: 10px 20px;
+            width: 100px;
+            height: 100px;
+            color: green;
+        }
+
+        div:nth-child(4) {
+            /* 상, 좌우, 하  */
+            border: 10px solid black;
+            padding: 10px 50px 20px;
+            width: 100px;
+            height: 100px;
+            color: blue;
+        }
+
+        div:nth-child(5) {
+            /* 상, 좌우, 하  */
+            border: 10px solid black;
+            width: 100px;
+            height: 100px;
+            color: green;
+
+            /* 상,하,좌,우 각각 줄수 있다. */
+            padding-top: 10px;
+
+            /* 아래와 같이 각각 줄 수 있습니다.  */
+            /* padding-top: 10px; */
+            /* padding-right: 50px; */
+            /* padding-bottom: 20px; */
+            /* padding-left: 50px; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+</body>
+
+</html>
