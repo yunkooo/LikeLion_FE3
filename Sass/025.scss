@@ -1,0 +1,9 @@
+$yungu: 10;
+@while $yungu > 1 {
+    $yungu: $yungu - 2;
+    .content-#{$yungu}{
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+}

@@ -1,0 +1,12 @@
+
+@for $i from 1 through 5 {
+    .photo-box:nth-child(#{$i}) {
+        background-image: url("../assets/phoster#{$i}.png");
+    }
+} 
+
+@for $yungu from 1 through 3 {
+    .profile:nth-child(#{$yungu}) {
+        background-image: url("../assets/profile#{$yungu}.png");
+    }
+}
