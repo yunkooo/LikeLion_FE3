@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        /*
+        절대적인 것은 아니고 주로 입니다 
+
+        고정 단위로 주면 좋은것 : 패딩. 마진, 모니터크기에 상관없이 보일것들, 이미지, 반응형을 고려하지않아도 될때, 글씨와 견련 없는것들, 계산하기 쉬워야하는것들
+        
+        가변 단위로 주면 좋은것 : 패딩, 마진, 이미지, 폰트(병원에 홈페이지 납품, 병원장님이 캔슬 -> 폰트가 너무 작아서-> 가변으로 주었다면 body폰트 하나만 수정혔으면 되는거다.)
+        */
+        .one {
+            font-size: 32px;
+        }
+
+        .two {
+            font-size: 16px;
+        }
+
+        .three {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="one">hello world</h1>
+    <h1>hello world</h1>
+    <p class="two">hello world</p>
+    <p>hello world</p>
+    hello world
+    <h1>hello world</h1>
+    <h1 class="three">hello world</h1>
+</body>
+
+</html>
