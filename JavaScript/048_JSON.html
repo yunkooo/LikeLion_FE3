@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table,
+        thead,
+        tbody,
+        th,
+        tr,
+        td {
+            border: solid 1px black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="renderTable(userData)">회원정보 로딩</button>
+    <table style="width:100%;" id="tableInfo">
+        <thead>
+            <th onclick="sort('_id')" style="width: 15%">id</th>
+            <th onclick="sort('index')" style="width: 15%">index</th>
+            <th onclick="sort('guid')" style="width: 15%">guid</th>
+            <th onclick="sort('age')" style="width: 15%">age</th>
+            <th onclick="sort('name')" style="width: 15%">name</th>
+            <th onclick="sort('gender')" style="width: 15%">gender</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        let userData = [
+            {
+                "_id": "63465565117533f2e0a2a7d8",
+                "index": 0,
+                "guid": "69f8aa06-e28b-46f2-a87d-385d3d77e513",
+                "age": 26,
+                "name": "Aisha Powers",
+                "gender": "female"
+            },
+            {
+                "_id": "63465565fe9896afd714202f",
+                "index": 1,
+                "guid": "ff8d22f0-b926-4463-a278-5606958f97da",
+                "age": 39,
+                "name": "Chelsea Nielsen",
+                "gender": "female"
+            },
+            {
+                "_id": "63465565a897842b4a395369",
+                "index": 2,
+                "guid": "6ab7b789-0287-499f-b8a2-e4e771c92b1e",
+                "age": 39,
+                "name": "Crane Patton",
+                "gender": "male"
+            },
+            {
+                "_id": "634655653b613b7141d406d9",
+                "index": 3,
+                "guid": "edec3573-0d3b-4b1a-9c72-dddf241bb6fc",
+                "age": 30,
+                "name": "Janie Pierce",
+                "gender": "female"
+            },
+            {
+                "_id": "63465565b262a85dd4dc6db3",
+                "index": 4,
+                "guid": "28b41e78-c347-4846-b00b-572684b48181",
+                "age": 32,
+                "name": "Guerra Sandoval",
+                "gender": "male"
+            }
+        ]
+
+        let click = true;
+
+        function sort(key) {
+            if (click) {
+                click = false;
+                let sortedData = jsonData.sort((a, b) => (a[key] < b[key] ? -1 : (a[key] > b[key] ? 1 : 0)));
+                renderTable(sortedData);
+            } else {
+                click = true;
+                let sortedData = jsonData.sort((a, b) => (a[key] > b[key] ? -1 : (a[key] < b[key] ? 1 : 0)));
+                renderTable(sortedData);
+            }
+        }
+
+        function renderTable(userData) {
+            // console.log(userData[0])
+            let tableBodyData = [];
+            for (const user of userData) {
+                tableBodyData.push(`
+                <tr>
+                    <td>${user._id}</td>
+                    <td>${user.index}</td>
+                    <td>${user.guid}</td>
+                    <td>${user.age}</td>
+                    <td>${user.name}</td>
+                    <td>${user.gender}</td>
+                </tr>
+                    `)
+            }
+
+
+
+
+            console.log(tableBodyData.join(""))
+            document.querySelector('#tableInfo > tbody').innerHTML = tableBodyData.join("")
+        }
+    </script>
+</body>
+
+</html>
