@@ -2,11 +2,13 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
     <style>
         .eye-right {
+            fill: blue;
             animation-duration: 0.5s;
             animation-name: blink;
             animation-direction: alternate;
@@ -15,6 +17,7 @@
         }
 
         .eye-left {
+            fill: blue;
             animation-duration: 0.5s;
             animation-name: blink;
             animation-direction: alternate;
@@ -28,11 +31,17 @@
             }
         }
     </style>
-    <title></title>
 </head>
 
 <body>
     <svg width="624" height="465" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <style type="text/css">
+                .eye-right {
+                    fill: red;
+                }
+            </style>
+        </defs>
         <path
             d="m446.529 308.502 79.386-37.479c-37.824-34.863-111.48-58.521-196.146-58.521-123.264 0-223.191 50.142-223.191 112.002 0 61.857 99.927 112.002 223.191 112.002 94.674 0 175.575-29.586 208.011-71.334l-91.251-56.67Z"
             fill="#00A249" />
@@ -102,12 +111,12 @@
             fill="#fff" />
         <path d="M254 136c0 16.016-13.208 29-29.5 29S195 152.016 195 136s13.208-29 29.5-29 29.5 12.984 29.5 29Z"
             stroke="#000" />
-        <ellipse class="eye-left" cx="224.5" cy="136" rx="12.5" ry="12" fill="red" />
+        <ellipse class="eye-left" cx="224.5" cy="136" rx="12.5" ry="12" fill="#000" />
         <path d="M383 129c0 16.016-13.208 29-29.5 29S324 145.016 324 129s13.208-29 29.5-29 29.5 12.984 29.5 29Z"
             fill="#fff" />
         <path d="M383 129c0 16.016-13.208 29-29.5 29S324 145.016 324 129s13.208-29 29.5-29 29.5 12.984 29.5 29Z"
             stroke="#000" />
-        <ellipse class="eye-right" cx="353.5" cy="129" rx="12.5" ry="12" fill="red" />
+        <ellipse class="eye-right" cx="353.5" cy="129" rx="12.5" ry="12" fill="#000" />
     </svg>
 </body>
 

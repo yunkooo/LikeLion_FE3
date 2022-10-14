@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        article {
+            margin: 100px auto 0;
+            width: 200px;
+        }
+
+        .btn-select {
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .btn-select::after {
+            content: url(./img/icon-Triangle-down.png);
+            width: 10px;
+            height: 10px;
+        }
+
+        .select-list {}
+    </style>
+    <title>버튼 만들기</title>
+</head>
+
+<body>
+    <article>
+        <button class="btn-select">최애 프로그래밍 언어</button>
+        <ul class="select-list">
+            <li><button type="button">Python</button></li>
+            <li><button type="button">Java</button></li>
+            <li><button type="button">JavaScript</button></li>
+            <li><button type="button">C#</button></li>
+            <li><button type="button">C/C++</button></li>
+    </article>
+    </ul>
+</body>
+
+</html>

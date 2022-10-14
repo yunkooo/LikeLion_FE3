@@ -2,9 +2,9 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <style>
         /* animation */
@@ -40,6 +40,9 @@
             padding: 0;
         }
 
+        /* layout */
+
+        /* design */
         *,
         *::after,
         *::before {
@@ -47,16 +50,16 @@
         }
 
         body {
-            background-color: rebeccapurple;
+            background: rebeccapurple;
         }
 
         .licat {
+            /* background: blue; */
             position: relative;
             top: 100px;
             margin: 50px auto;
             width: 400px;
             height: 380px;
-            /* background-color: blue; */
         }
 
         .licat .ear {
@@ -67,6 +70,28 @@
             border: 10px solid black;
             background-color: var(--sec);
             /* border-radius: 50%; */
+        }
+
+        .earline.left {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 60px;
+            /* height: 10px; */
+            border: 5px solid black;
+            border-radius: 10% 0 0 60%;
+            transform: rotate(90deg);
+        }
+
+        .earline.right {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 60px;
+            /* height: 10px; */
+            border: 5px solid black;
+            border-radius: 60% 0 0 10%;
+            transform: rotate(90deg);
         }
 
         .licat .ear.left {
@@ -83,14 +108,14 @@
             right: 65px;
             transform: rotate(30deg);
             border-radius: 50% 70% 0 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             animation: ani-ear-right 1s infinite alternate;
-
         }
 
         .licat .face {
+            /* background: yellow; */
             position: absolute;
             /* top: 0px; */
-            /* background: yellow; */
             bottom: 0;
             width: 400px;
             height: 310px;
@@ -105,7 +130,7 @@
             width: 23px;
             height: 23px;
             border-radius: 50%;
-            background-color: #000;
+            background-color: black;
         }
 
         .eye.left {
@@ -116,52 +141,28 @@
             right: 125px;
         }
 
-        .earline.left {
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 60px;
-            border: 5px solid black;
-            border-radius: 10% 0 0 60%;
-            background-color: black;
-            transform: rotate(90deg);
-        }
-
-        .earline.right {
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 60px;
-            border: 5px solid black;
-            border-radius: 60% 0 0 10%;
-            background-color: black;
-            transform: rotate(90deg);
-        }
-
         .nose {
             position: absolute;
             top: 140px;
             left: 172px;
             width: 35px;
             height: 25px;
-            background-color: #000;
+            background-color: black;
             border-radius: 20% 20% 50% 50%;
         }
 
-        .mousebottom {
+        .mouthbottom {
             position: absolute;
-            top: 180px;
-            left: 165px;
             width: 50px;
-            height: 50px;
-            border-radius: 10% 10% 40% 40%;
+            height: 150px;
             border: 10px solid black;
+            border-radius: 10% 10% 40% 40%;
+            top: 170px;
+            left: 165px;
             background-color: var(--pri);
         }
 
-        /* layout */
-        /* design */
-        /* mediaquery */
+        /* media query */
     </style>
 </head>
 
@@ -177,7 +178,7 @@
             <div class="eye left"></div>
             <div class="eye right"></div>
             <div class="nose"></div>
-            <div class="mousebottom"></div>
+            <div class="mouthbottom"></div>
         </div>
     </div>
 </body>
