@@ -71,11 +71,11 @@ function genItem(val, complete) {
         li.classList.add('done')
     }
 
-    li.addEventListener('click', () => {
+    li.addEventListener('click', (event) => {
         li.classList.toggle('done')
 
         // 할일 데이터의 
-        // buildTasks()
+        buildTasks()
     })
 
     // 삭제 버튼 만들기
@@ -83,12 +83,13 @@ function genItem(val, complete) {
     btn.innerHTML = '<i class="fa-solid fa-trash"></i>'
     li.appendChild(btn);
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (event) => {
         li.remove();
 
+        // event.stopPropagation()
 
         // 할일 데이터의 
-        buildTasks()
+        // buildTasks()
 
         // 다운로드 버튼 노출 함수
         showDownload();
